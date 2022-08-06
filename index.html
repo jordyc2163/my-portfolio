@@ -3,135 +3,191 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/Portfolio/css/index_style.css">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/index_style.css">
 </head>
 
 <body>
- <header id="topnav">
-     <nav>
-        <div class="navbar">
-            <ul class="nav-list">
-                <li><a href="">Home</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Capstone</a></li>
-                <li><a href="">Contact</a></li>
-                <div class="wrapper">
-                    <form action="https://www.google.com/search?">
-                        <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
-                        <input type="text" id="searchbar" placeholder="Search" name="q">
-                        <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />   
-                    </form>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Welcome</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-endmx-3" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Socials
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://github.com/jordyc2163">GitHub</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.linkedin.com/in/jordy-caceres-9761b5156/">LinkedIn</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </ul>
-        </div>
-     </nav>
- </header>
+            </div>
+        </nav>
+        <header>
 
-<main>
-    <section class="biography">
-        <div class="personal">
-            <div class="intro">
+
+        </header>
+
+        <main>
+            <div class="row intro">
                 <h1>Welcome</h1>
-                <p>Welcome to my portoflio. Here you can find a little about myself, like my hobbies, what I did as a career, as well as why I chose web development. One thing I am most curious about are whether other students are doing a career changes as well which I ask below.<br>Thanks for looking.</p>
+                <p>Welcome to my portoflio. Here you can find a little about myself, like my hobbies, what I did as
+                    a career, as well as why I chose web development. One thing I am most curious about are
+                    whether
+                    other students are doing a career changes as well which I ask below.<br>Thanks for looking.
+                </p>
             </div>
-            <div class="myself">
-                <picture>
-                    <img src="images/sweet16_1.jpg" alt="image of me" id="mypic">
-                </picture>
-                
-                <p>My name is Jordy Caceres. I live in New York City, the city that never truly sleeps, and worked as a Registered Nurse for different hospitals.<br><br> There's me on the left there.<br><br> I went to City College and have a BS in Biology, and also have a BS in Nursing at NYU. You would think I have caught on by now, I'm now dipping my feet into web development. I'm excited to start this career journey as it definitely has been mentally stimulating so far, with extremely rewarding battles when finally solving a problem that has me thinking all day.<br><br>So far I have good understanding of HTML, a little bit of python, and honestly think I need more work on CSS. But these are only the begining and webdev is a dynamic entity of never ending learning. A career I think is right for me. I have done minor fun tasks that helped me learn python, such as creating a rock paper scissors game with an rng AI, a dice roller game in which you win with Snake Eyes, and others.</p>
+
+            <div class="row bio-portion">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/profile_photo.png" class="card-img-top-me" alt="image of me">
+                    <div class="card-body">
+                        <h5 class="card-title">Caceres, Jordy BS, BSN | Software Engineer</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="bio-body">
+                    <p>My name is Jordy Caceres. I live in New York City, the city that never truly sleeps, and
+                        worked
+                        as a Registered Nurse for different hospitals.<br><br>
+                        I
+                        went to City College and have a BS in Biology, and also have a BS in Nursing at NYU. You would
+                        think I have caught on by now, I'm now fully immersed into web development. I'm excited
+                        to have begun this career journey as it definitely has been mentally stimulating, with extremely
+                        rewarding battles that I hope to contribute towards the goals and success of a company.<br><br>
+                    <p>I have completed a Software Developer Bootcamp at Coding Temple, and through that,
+                        have developed applications ranging from languages Python, Javascript, Typescript, and Node.js.
+                        More
+                        information on my applications can be found in the projects section.</p>
+                </div>
             </div>
+
             <div class="hobbies">
                 <h2>You can find me doing things like...</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/Portfolio/images/bagel1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/Portfolio/images/bagel1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/Portfolio/images/bagel1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <ol id="hobbylist">
                     <li>Activity</li>
-                        <p>I enjoy staying active. I would go to the gym when I have time, or when it's nice outside, go for a run. My firends and I like to do activities together and occasoinally I would try soemthing new. A friend fo mine introduced me to indoor rock climbing as a sport and it might be my new favorite!</p>
+                    <p>I enjoy staying active. I would go to the gym when I have time, or when it's nice
+                        outside, go
+                        for a run. My friends and I like to do activities together and occasoinally I would try
+                        soemthing new. A friend fo mine introduced me to indoor rock climbing as a sport and it
+                        might be my new favorite!</p>
                     <li>Gaming</li>
-                        <p>I joke with my friends a lot whenever we're losing a match saying "I don't play to have fun, I play to win." Sarcastically, it holds a bit of truth. I enjoy playing when a title catches me like a great book, and when it does I will usually be caught up for many hours to come. I can be very competitive and try to push myself one further in difficulty, as those endevours are truly rewarding. Otherwise, I hang back with my friends, enjoy casual games, and continue to yell that I'm here to win.</p>
+                    <p>I joke with my friends a lot whenever we're losing a match saying "I don't play to have
+                        fun,
+                        I play to win." Sarcastically, it holds a bit of truth. I enjoy playing when a title
+                        catches
+                        me like a great book, and when it does I will usually be caught up for many hours to
+                        come. I
+                        can be very competitive and try to push myself one further in difficulty, as those
+                        endevours
+                        are truly rewarding. Otherwise, I hang back with my friends, enjoy casual games, and
+                        continue to yell that I'm here to win.</p>
                     <li>Food</li>
-                        <p>Cooking has been one thing I did not know would interest me so much. From watching cooking channels to now trying out new recipes, I can say I find satisfaction in when my food looks presentable and delicious. Always looking to expand my repitoire of meals.</p>
+                    <p>Cooking has been one thing I did not know would interest me so much. From watching
+                        cooking
+                        channels to now trying out new recipes, I can say I find satisfaction in when my food
+                        looks
+                        presentable and delicious. Always looking to expand my repitoire of meals.</p>
                 </ol>
             </div>
-            <div class="bagel">
-                <h2>Bagel</h2>
-                <p>This is my 14 week old son Bagel. He's a new addition to our family. He likes to chew on pee pads and when removed, pee on the spot where it used to be seconds later. A speed king and chonk all at once. <br>I felt he deserved his own section. </p>
-                    <div>
-                        <picture>
-                            <img src="images/bagel_vc.JPG" alt="picture of a beatiful pug" id="bagelpic">
-                        </picture>
-                        <figcaption>My 14 week old pug Bagel</figcaption>
-                    </div>
+
+            <div class="career">
+                <h2>Career Change</h2>
+
+                <picture>
+                    <img src="images/school_lobby.jpg" alt="image of lobby" id="schoolpic">
+                </picture>
+                <figcaption>Seating area where anxiety started</figcaption>
+
+
+                <p>I began my first real career as a Registered Nurse. I worked in various units, working with a
+                    diverse
+                    patient population requiring medical attention, from stable elective surgeries to acute trauma
+                    events, and have met incredible people from all different backgrounds. I learned many things in
+                    my
+                    career, including collaboration, interdisciplinary teamwork, and revision to plans when outcomes
+                    are
+                    not effective, much of which I believe can translate to this new career.</p>
             </div>
-        </div>
-        <div class="career">
-            <h2>Career Change</h2>
 
-            <picture>
-                <img src="images/school_lobby.jpg" alt="image of lobby" id="schoolpic">
-            </picture>
-            <figcaption>Seating area where anxiety started</figcaption>
-            
+            <div class="webdev">
+                <h2>Why Web Development?</h2>
+                <p>
+                    I chose web development for a few reasons. I wasn't sure initally what it entailed. My best friend
+                    is a software engineer, and I was able to see him grow in his career. We'd compare our lifestyles or
+                    our days at work, his sounded
+                    mentally stimulating whereas mine was physically taxing. Knowing I wouldn't be able to continue with
+                    a poor injury record from weightlifitng, I am grateful for the qualities I have inherited through
+                    it. Nursing has made me confident in communication and interdisciplinary collaboration, voicing
+                    suggestions especially through patient advocation, and thinking critically. I felt these could carry
+                    over beautfilly into a career of software engineering, one that emphasis team cooperation, mental
+                    stimulation, and thinking on constant improvement. </p>
+            </div>
 
-            <p>I began my first real career as a Registered Nurse. I worked in various units, working with a diverse patient population requiring medical attention, from stable elective surgeries to acute trauma events, and have met incredible people from all different backgrounds. I learned many things in my career, including collaboration, interdisciplinary teamwork, and revision to plans when outcomes are not effective, much of which I believe can translate to this new career.</p>
+        </main>
 
-            <form action="" class="careerq">
-                <p>Are you also doing a career change?</p>
-                <div>
-                <input type="radio" name="questionaire" id="ccquestionyes" value="yes">
-                <label for="ccquestionyes">Yes</label>
-                </div>
-                <div>
-                    <input type="radio" name="questionaire" id="ccquestionno" value="no">
-                    <label for="ccquestionno">No</label>
-                </div>
-            </form>
-        </div>
-        <div class="webdev">
-            <h2>Why Web Development?</h2>
-            <p>I chose web development for a few reasons. I wasn't sure initally what it entailed, only supported my best friend through his own journey as we finshed college. I first heard about it through his work, hearing him and our other friends talk about what they were working with or stuck on. It sounded mentally stimulating and being able to work from home or carry your work with you peaked my curiosity.<br>I always felt my career in nursing at the time was flexible with specific areas of interest to work in, such as L&D, OR, ER, anything that sparked your interest, for only 3 days a week. I found it not to be the case. I found myself drained by the end of the week, and much similarities between units that felt repetitive. I was interested in critical care thinking it would be mentally stimulating. I later realized I was getting less stimulated just as much as it was working my back. I also felt I was slowly burning out, feeling emotionally drained, and overwhelmed with poor staffing and patient ratios. With much thought, and discussions with my close friend group that are in the field, I think this career suits my ability to move around, ease the taxing demand on my body, and work my mind rather than to kill my back and sleep schedule by 30.  </p>
-        </div>
-    </section>
-    <section class="sidetab">
-        <article>
-            <nav class="resources">
-                <h1>Great Resources</h1>
-                <ul>
-                    <li><a href="https://www.udemy.com/">Preparing</a></li>
-                    <li><a href="https://www.pcgamesn.com/relaxing-games-chill-games">Stress Relief</a></li>
-                </ul>
-            </nav>
-        </article>
-        <article>
-            <nav class="socialmedia">
-                <h1>Social Media</h1>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/jordy-caceres-9761b5156/">LinkedIn</a></li>
-                    <li><a href="https://github.com/jordyc2163">GitHub</a></li>
-                    <li><a href="https://www.instagram.com/jordyc21/">Instagram</a></li>
-                </ul>
-            </nav>
-        </article>
-    </section>
-</main>
+        <footer>
 
-<footer>
-    <form action="">
-        <div>
-            <label for="recommendbox">Any recommendations to this website greatly appreciated!</label>
-            <input type="text" placeholder="Enter your message" id="recommendbox">
-            <label for="dropdowntitle">Please select role</label>
-            <select name="title" id="dropdowntitle">
-                <option value="guest">Guest</option>
-                <option value="student">Student</option>
-                <option value="instructor">Instructor</option>
-            </select>
-            <button>Submit</button>
-        </div>
-    </form>
-</footer>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
