@@ -6,71 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/Portfolio/css/index_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/partials/css/app.css">
     <title>My Portfolio</title>
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Welcome</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-endmx-3" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Socials
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://github.com/jordyc2163">GitHub</a></li>
-                                <li><a class="dropdown-item"
-                                        href="https://www.linkedin.com/in/jordy-caceres-9761b5156/">LinkedIn</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+
         <header>
-
-
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><i class="fa-solid fa-code"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page"
+                                    href="https://www.linkedin.com/in/jordy-caceres-9761b5156/" target="_blank">LinkedIn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/jordyc2163" target="_blank">Github</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
 
         <main>
-            <div class="row intro">
-                <h1>Welcome</h1>
-                <p>Welcome to my portoflio. Here you can find a little about myself, like my hobbies, what I did as
-                    a career, as well as why I chose web development. One thing I am most curious about are
-                    whether
-                    other students are doing a career changes as well which I ask below.<br>Thanks for looking.
-                </p>
+            <div class="row profile">
+                <div class="d-flex justify-content-center">
+                    <div class="col-6 text-center">
+                        <img src="partials/images/profile_photo.png" class="profile-img" alt="image of me">
+                        <h3 class="display-6">Caceres, Jordy BS, BSN | Software Engineer</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h1 class="display-3">Welcome</h1>
+                <p class="lead">You can find my projects and a little about me in this page. Thanks for looking.</p>
             </div>
 
             <div class="row bio-portion">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/profile_photo.png" class="card-img-top-me" alt="image of me">
-                    <div class="card-body">
-                        <h5 class="card-title">Caceres, Jordy BS, BSN | Software Engineer</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p>
-                    </div>
-                </div>
+
                 <div class="bio-body">
                     <p>My name is Jordy Caceres. I live in New York City, the city that never truly sleeps, and
                         worked
@@ -81,80 +71,17 @@
                         to have begun this career journey as it definitely has been mentally stimulating, with extremely
                         rewarding battles that I hope to contribute towards the goals and success of a company.<br><br>
                     <p>I have completed a Software Developer Bootcamp at Coding Temple, and through that,
-                        have developed applications ranging from languages Python, Javascript, Typescript, and Node.js.
+                        have developed applications ranging from languages Python, Javascript, and Typescript.
                         More
                         information on my applications can be found in the projects section.</p>
                 </div>
-            </div>
-
-            <div class="hobbies">
-                <h2>You can find me doing things like...</h2>
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/Portfolio/images/bagel1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/Portfolio/images/bagel1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/Portfolio/images/bagel1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <ol id="hobbylist">
-                    <li>Activity</li>
-                    <p>I enjoy staying active. I would go to the gym when I have time, or when it's nice
-                        outside, go
-                        for a run. My friends and I like to do activities together and occasoinally I would try
-                        soemthing new. A friend fo mine introduced me to indoor rock climbing as a sport and it
-                        might be my new favorite!</p>
-                    <li>Gaming</li>
-                    <p>I joke with my friends a lot whenever we're losing a match saying "I don't play to have
-                        fun,
-                        I play to win." Sarcastically, it holds a bit of truth. I enjoy playing when a title
-                        catches
-                        me like a great book, and when it does I will usually be caught up for many hours to
-                        come. I
-                        can be very competitive and try to push myself one further in difficulty, as those
-                        endevours
-                        are truly rewarding. Otherwise, I hang back with my friends, enjoy casual games, and
-                        continue to yell that I'm here to win.</p>
-                    <li>Food</li>
-                    <p>Cooking has been one thing I did not know would interest me so much. From watching
-                        cooking
-                        channels to now trying out new recipes, I can say I find satisfaction in when my food
-                        looks
-                        presentable and delicious. Always looking to expand my repitoire of meals.</p>
-                </ol>
+                <span>My Capstone project gained traction on Course Report. You can see me talk about it on their blog
+                    <a
+                        href="https://www.coursereport.com/blog/inkvue-what-bootcamp-grad-jordy-built-at-coding-temple">here</a></span>
             </div>
 
             <div class="career">
                 <h2>Career Change</h2>
-
-                <picture>
-                    <img src="images/school_lobby.jpg" alt="image of lobby" id="schoolpic">
-                </picture>
-                <figcaption>Seating area where anxiety started</figcaption>
-
 
                 <p>I began my first real career as a Registered Nurse. I worked in various units, working with a
                     diverse
@@ -179,15 +106,150 @@
                     over beautfilly into a career of software engineering, one that emphasis team cooperation, mental
                     stimulation, and thinking on constant improvement. </p>
             </div>
+            <div class="row" id="projects">
+                <h3 class="display-2">My Projects</h3>
+                <div class="col-xl">
+                    <div class="col mb-5">
+                        <h1 class="display-3">inkVue</h1>
+                        <a href="https://inkvue-first-project.herokuapp.com/" target="_blank">here</a>
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="partials/images/inkVueImages/landing.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Find your Artist Seamlessly</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="partials/images/inkVueImages/profile.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Save Your Favorites</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="partials/images/inkVueImages/register.png" class="d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Artists Register with Ease</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
 
+                    <div class="mb-5">
+                        <h1 class="display-3">YelpCamp</h1>
+                        <a href="https://yelp-camp-finder.herokuapp.com/" target="_blank">here</a>
+                        <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="partials/images/yelpCampImages/landing.png" class="d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Find Campsites</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="partials/images/yelpCampImages/show.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Browse Reviews and Photos</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="partials/images/yelpCampImages/new.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Upload a Campsite Location</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h1 class="display-4">Others</h1>
+                        <figure class="figure">
+                            <img src="/partials/images/weatherApp.png" class="figure-img img-fluid rounded" alt="...">
+                            <figcaption class="figure-caption">Simple, yet effective application that renders realtime
+                                weather through search field.</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
         </main>
 
         <footer>
+            <div class="row" id="contact">
+                <div class="col">
+                    <h3>Contact Me</h3>
+                </div>
+                <dl class="row">
+                    <dt class="col-sm-3"><i class="fa-solid fa-envelope"></i></dt>
+                    <dd class="col-sm-9">jordycaceres00@gmail.com</dd>
 
+                    <dt class="col-sm-3"><i class="fa-solid fa-phone"></i></dt>
+                    <dd class="col-sm-9">
+                        <p>+13477388690</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
         </footer>
+
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/343d60576c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

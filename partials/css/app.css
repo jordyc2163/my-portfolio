@@ -1,0 +1,43 @@
+body {
+    height: 5000px;
+}
+.profile {
+    background-image: url(/partials/images/desk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+
+.profile-img {
+    clip-path: circle(37% at 50% 40%);
+    position: relative;
+    top: 20px;
+    width: 20rem;
+}
+
+.card-body {
+    justify-content: center;
+    align-items: center;
+}
+.bio-portion {
+    justify-content: space-around;
+}
+.bio-body {
+    width: 50%;
+}
+
+.d-block {
+    max-height: 40rem;
+}
+
+.display-6 {
+    color: whitesmoke;
+    background-color: #83c5be;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
