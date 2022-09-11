@@ -2,7 +2,7 @@ body {
     height: 5000px;
 }
 .profile {
-    background-image: url(/partials/images/desk.jpg);
+    background-image: url(../images/desk.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
