@@ -1,0 +1,23 @@
+<form action="{{ url_for('edit', id=post_id) }}" method="post" class="needs-validation" novalidate>
+    {{ edit_post_form.hidden_tag() }}
+    <div class="mb-3 w-75 offset-1">
+        {{ edit_post_form.edit_comment(class="form-control", placeholder="Add a Comment") }}
+        {% for error in edit_post_form.edit_comment.errors%}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+    </div>
+    <div class="form-check mb-3">
+        {{ edit_post_form.edit_checkbox(class="form-check-input", value="yesToAnonymous", id="checkbox") }}
+        {{ edit_post_form.edit_checkbox.label(class="form-check-label", for="checkbox") }}
+        {% for error in edit_post_form.edit_checkbox.errors%}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+    </div>
+    {{ edit_post_form.edit_post(class="btn btn-outline-secondary") }}
+</form>

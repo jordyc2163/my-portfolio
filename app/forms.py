@@ -38,3 +38,11 @@ class PostForm(FlaskForm):
     comment = StringField('Comment', validators=[DataRequired(), Length(min = 1, max = 80)])
     checkbox = BooleanField('Post Anonymously?')
     post = SubmitField('Post')
+
+class EditPostForm(FlaskForm):
+    edit_comment = StringField('Edit Comment', validators=[DataRequired(), Length(min = 1, max = 80)])
+    edit_checkbox = BooleanField('Post Anonymously?')
+    edit_post = SubmitField('Save Changes')
+
+class DeletePost(FlaskForm):
+    delete = SubmitField('Delete')

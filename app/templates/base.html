@@ -39,6 +39,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact">Contact</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#feedback">Add Feedback</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="d-flex">
@@ -92,11 +95,11 @@
                         <h3>Contact Me</h3>
                     </div>
                     <dl class="row">
-                        <dt class="col-sm-3"><i class="fa-solid fa-envelope"></i></dt>
-                        <dd class="col-sm-9">jordycaceres00@gmail.com</dd>
+                        <dt class="col-sm-1"><i class="fa-solid fa-envelope"></i></dt>
+                        <dd class="col-sm-11">jordycaceres00@gmail.com</dd>
 
-                        <dt class="col-sm-3"><i class="fa-solid fa-phone"></i></dt>
-                        <dd class="col-sm-9">
+                        <dt class="col-sm-1"><i class="fa-solid fa-phone"></i></dt>
+                        <dd class="col-sm-11">
                             <p>+13477388690</p>
                         </dd>
                     </dl>
@@ -153,6 +156,11 @@
         {% if modal2 %}
         <script> $(document).ready(function () {
                 $('#loginModal2').modal('show');
+            })</script>
+        {% endif %}
+        {% if modal3 %}
+        <script> $(document).ready(function () {
+                $('#editModal').modal('show');
             })</script>
         {% endif %}
 </body>
