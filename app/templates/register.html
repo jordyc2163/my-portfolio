@@ -1,0 +1,98 @@
+{% block register %}
+
+<form action="{{ url_for('register') }}" method="post" class="needs-validation" novalidate>
+    <div class="modal-header">
+        <h5 class="modal-title" id="loginModal2">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body p-3">
+
+        {{ form.hidden_tag() }}
+        <div class="input-group mb-3">
+            <span class="input-group-text">First and last name</span>
+            {{ register_form.first_name(class="form-control", placeholder="John") }}
+            {{ register_form.last_name(class="form-control", placeholder="Doe") }}
+            {% for error in register_form.first_name.errors %}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            {% for error in register_form.last_name.errors %}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            {{ register_form.username(class="form-control", placeholder="Username") }}
+            {% for error in register_form.username.errors %}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            {{ register_form.email.label(for="registerEmail", class="form-label") }}
+            {{ register_form.email(class="form-control", id="registerEmail") }}
+            <div id="emailHelp" class="form-text">Your email will NOT be shared with anyone else.</div>
+            {% for error in register_form.email.errors %}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                {{ register_form.password.label(for="registerPassword", class="col-form-label") }}
+            </div>
+            <div class="col-auto">
+                {{ register_form.password(id="registerPassword", class="form-control") }}
+            </div>
+            <div class="col-auto mb-3">
+                <span id="passwordHelpInline" class="form-text">
+                    Must be 8-20 characters long.
+                </span>
+            </div>
+            {% for error in register_form.password.errors %}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                {{ register_form.password2.label(for="registerPasswordRepeat", class="col-form-label") }}
+            </div>
+            <div class="col-auto">
+                {{ register_form.password2(id="registerPasswordRepeat", class="form-control") }}
+            </div>
+            <div class="col-auto">
+                <span id="passwordHelpInline" class="form-text">
+                    Confirm Password.
+                </span>
+            </div>
+            {% for error in register_form.password2.errors %}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        <div>
+            {{ register_form.register(class="btn btn-primary") }}
+        </div>
+    </div>
+</form>
+<div class="modal-footer">
+    <button class="btn btn-secondary" data-bs-target="#loginModal" data-bs-toggle="modal">Back to Log In</button>
+</div>
+
+
+{% endblock %}

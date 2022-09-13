@@ -1,0 +1,43 @@
+{% block login %}
+<div class="modal-header">
+    <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<form action="{{ url_for('login') }}" method="post" class="needs-validation" novalidate>
+    {{ form.hidden_tag() }}
+    <div class="modal-body">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            {{ form.email(class="form-control")}}
+            {% for error in form.email.errors%}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            {{ form.password(class="form-control")}}
+            {% for error in form.password.errors%}
+            <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
+                {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="mb-3 form-check">
+            {{ form.remember_me() }}
+            <label class="form-check-label" for="check">Remember me</label>
+        </div>
+        <div>
+            {{ form.submit(class="btn btn-primary")}}
+        </div>
+    </div>
+</form>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+    <button class="btn btn-light" data-bs-target="#loginModal2" data-bs-toggle="modal">New User?</button>
+</div>
+
+{% endblock %}

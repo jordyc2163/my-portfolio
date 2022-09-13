@@ -1,199 +1,231 @@
 {% extends "base.html" %}
 
 {% block content %}
-        <main>
-            <div class="row profile">
-                <div class="d-flex justify-content-center">
-                    <div class="col-6 text-center">
-                        <img src="../static/images/profile_photo.png" class="profile-img" alt="image of me">
-                        <h3 class="display-6">Caceres, Jordy BS, BSN | Software Engineer</h3>
-                    </div>
-                </div>
-            </div>
+<main>
 
-            <div class="row">
-                {% if user %}
-                <h1 class="display-3">Welcome {{ user.username }}</h1>
-                {% else %}
-                <h1 class="display-3">Welcome</h1>
-                {% endif  %}
-                <p class="lead">You can find my projects and a little about me in this page. Thanks for looking.</p>
+    <!-- Modals -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                {% include "login.html" %}
             </div>
-
-            <div class="row bio-portion">
-
-                <div class="bio-body">
-                    <p>My name is Jordy Caceres. I live in New York City, the city that never truly sleeps, and
-                        worked
-                        as a Registered Nurse for different hospitals.<br><br>
-                        I
-                        went to City College and have a BS in Biology, and also have a BS in Nursing at NYU. You would
-                        think I have caught on by now, I'm now fully immersed into web development. I'm excited
-                        to have begun this career journey as it definitely has been mentally stimulating, with extremely
-                        rewarding battles that I hope to contribute towards the goals and success of a company.<br><br>
-                    <p>I have completed a Software Developer Bootcamp at Coding Temple, and through that,
-                        have developed applications ranging from languages Python, Javascript, and Typescript.
-                        More
-                        information on my applications can be found in the projects section.</p>
-                </div>
-                <span>My Capstone project gained traction on Course Report. You can see me talk about it on their blog
-                    <a
-                        href="https://www.coursereport.com/blog/inkvue-what-bootcamp-grad-jordy-built-at-coding-temple">here</a></span>
-            </div>
-
-            <div class="career">
-                <h2>Career Change</h2>
-
-                <p>I began my first real career as a Registered Nurse. I worked in various units, working with a
-                    diverse
-                    patient population requiring medical attention, from stable elective surgeries to acute trauma
-                    events, and have met incredible people from all different backgrounds. I learned many things in
-                    my
-                    career, including collaboration, interdisciplinary teamwork, and revision to plans when outcomes
-                    are
-                    not effective, much of which I believe can translate to this new career.</p>
-            </div>
-
-            <div class="webdev">
-                <h2>Why Web Development?</h2>
-                <p>
-                    I chose web development for a few reasons. I wasn't sure initally what it entailed. My best friend
-                    is a software engineer, and I was able to see him grow in his career. We'd compare our lifestyles or
-                    our days at work, his sounded
-                    mentally stimulating whereas mine was physically taxing. Knowing I wouldn't be able to continue with
-                    a poor injury record from weightlifitng, I am grateful for the qualities I have inherited through
-                    it. Nursing has made me confident in communication and interdisciplinary collaboration, voicing
-                    suggestions especially through patient advocation, and thinking critically. I felt these could carry
-                    over beautfilly into a career of software engineering, one that emphasis team cooperation, mental
-                    stimulation, and thinking on constant improvement. </p>
-            </div>
-            <div class="row" id="projects">
-                <h3 class="display-2">My Projects</h3>
-                <div class="col-xl">
-                    <div class="col mb-5">
-                        <h1 class="display-3">inkVue</h1>
-                        <a href="https://inkvue-first-project.herokuapp.com/" target="_blank">here</a>
-                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="../static/images/inkVueImages/landing.png" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Find your Artist Seamlessly</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../static/images/inkVueImages/profile.png" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Save Your Favorites</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../static/images/inkVueImages/register.png" class="d-block w-100"
-                                        alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Artists Register with Ease</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-            
-                    <div class="mb-5">
-                        <h1 class="display-3">YelpCamp</h1>
-                        <a href="https://yelp-camp-finder.herokuapp.com/" target="_blank">here</a>
-                        <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="../static/images/yelpCampImages/landing.png" class="d-block w-100"
-                                        alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Find Campsites</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../static/images/yelpCampImages/show.png" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Browse Reviews and Photos</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../static/images/yelpCampImages/new.png" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Upload a Campsite Location</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-            
-                    <div class="mb-5">
-                        <h1 class="display-4">Others</h1>
-                        <figure class="figure">
-                            <img src="../static/images/weatherApp.png" class="figure-img img-fluid rounded" alt="...">
-                            <figcaption class="figure-caption">Simple, yet effective application that renders realtime
-                                weather through search field.</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <section>
-            <h3>All Feedback </h3>
-            {% for post in posts %}
-            <div class="row">
-                <div class="col-6 offset-3 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                          <h6 class="card-subtitle mb-2 text-muted">{{ post.author.username }}</h6>
-                          <p class="card-text">{{ post.body }}</p>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            {% endfor %}
-        </section>
+        </div>
     </div>
+    <div class="modal fade" id="loginModal2" aria-hidden="true" aria-labelledby="loginModalLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                {% include "register.html" %}
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Intro -->
+    <div class="row profile">
+        <div class="d-flex justify-content-center">
+            <div class="col-6 text-center">
+                <img src="../static/images/profile_photo.png" class="profile-img" alt="image of me">
+                <h3 class="display-6">Caceres, Jordy BS, BSN | Software Engineer</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        {% if current_user.is_authenticated %}
+        <h1 class="display-3">Welcome {{ current_user.first_name }}</h1>
+        {% else %}
+        <h1 class="display-3">Welcome</h1>
+        {% endif %}
+        <p class="lead">You can find my projects and a little about me in this page. Thanks for looking.</p>
+    </div>
+
+    <div class="row bio-portion">
+
+        <div class="bio-body">
+            <p>My name is Jordy Caceres. I live in New York City, the city that never truly sleeps, and
+                worked
+                as a Registered Nurse for different hospitals.<br><br>
+                I
+                went to City College and have a BS in Biology, and also have a BS in Nursing at NYU. You would
+                think I have caught on by now, I'm now fully immersed into web development. I'm excited
+                to have begun this career journey as it definitely has been mentally stimulating, with extremely
+                rewarding battles that I hope to contribute towards the goals and success of a company.<br><br>
+            <p>I have completed a Software Developer Bootcamp at Coding Temple, and through that,
+                have developed applications ranging from languages Python, Javascript, and Typescript.
+                More
+                information on my applications can be found in the projects section.</p>
+        </div>
+        <span>My Capstone project gained traction on Course Report. You can see me talk about it on their blog
+            <a
+                href="https://www.coursereport.com/blog/inkvue-what-bootcamp-grad-jordy-built-at-coding-temple">here</a></span>
+    </div>
+
+    <div class="career">
+        <h2>Career Change</h2>
+
+        <p>I began my first real career as a Registered Nurse. I worked in various units, working with a
+            diverse
+            patient population requiring medical attention, from stable elective surgeries to acute trauma
+            events, and have met incredible people from all different backgrounds. I learned many things in
+            my
+            career, including collaboration, interdisciplinary teamwork, and revision to plans when outcomes
+            are
+            not effective, much of which I believe can translate to this new career.</p>
+    </div>
+
+    <div class="webdev">
+        <h2>Why Web Development?</h2>
+        <p>
+            I chose web development for a few reasons. I wasn't sure initally what it entailed. My best friend
+            is a software engineer, and I was able to see him grow in his career. We'd compare our lifestyles or
+            our days at work, his sounded
+            mentally stimulating whereas mine was physically taxing. Knowing I wouldn't be able to continue with
+            a poor injury record from weightlifitng, I am grateful for the qualities I have inherited through
+            it. Nursing has made me confident in communication and interdisciplinary collaboration, voicing
+            suggestions especially through patient advocation, and thinking critically. I felt these could carry
+            over beautfilly into a career of software engineering, one that emphasis team cooperation, mental
+            stimulation, and thinking on constant improvement. </p>
+    </div>
+    <div class="row" id="projects">
+        <h3 class="display-2">My Projects</h3>
+        <div class="col-xl">
+            <div class="col mb-5">
+                <h1 class="display-3">inkVue</h1>
+                <a href="https://inkvue-first-project.herokuapp.com/" target="_blank">here</a>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../static/images/inkVueImages/landing.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Find your Artist Seamlessly</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../static/images/inkVueImages/profile.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Save Your Favorites</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../static/images/inkVueImages/register.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Artists Register with Ease</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <h1 class="display-3">YelpCamp</h1>
+                <a href="https://yelp-camp-finder.herokuapp.com/" target="_blank">here</a>
+                <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../static/images/yelpCampImages/landing.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Find Campsites</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../static/images/yelpCampImages/show.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Browse Reviews and Photos</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../static/images/yelpCampImages/new.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Upload a Campsite Location</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <h1 class="display-4">Others</h1>
+                <figure class="figure">
+                    <img src="../static/images/weatherApp.png" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption">Simple, yet effective application that renders realtime
+                        weather through search field.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</main>
+<section>
+    <h3>All Feedback </h3>
+    {% if current_user.is_anonymous %}
+    <h5>Log in <a href="{{ url_for('login') }}">here</a> to leave a comment!</h5>
+    {% endif %}
+    <form action="{{ url_for('post') }}" method="post" class="needs-validation" novalidate>
+        {{ post_form.hidden_tag() }}
+        <div class="input-group mb-3 w-75 offset-1">
+            {{ post_form.comment(class="form-control", placeholder="Add a Comment") }}
+            {{ post_form.post(class="btn btn-outline-secondary") }}
+        </div>
+        <div class="form-check">
+            {{ post_form.checkbox(class="form-check-input", value="yesToAnonymous", id="checkbox") }}
+            {{ post_form.checkbox.label(class="form-check-label", for="checkbox") }}
+        </div>
+    </form>
+
+    {% for post in posts %}
+    <div class="row">
+        <div class="col-6 offset-3 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">{{ post.author.username }}</h6>
+                    <p class="card-text">{{ post.body }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+</div>
 
 {% endblock %}
