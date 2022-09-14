@@ -1,1 +1,1 @@
-web: gunicorn app:app --preload
+web: flask db upgrade; gunicorn portfolio:app --preload
