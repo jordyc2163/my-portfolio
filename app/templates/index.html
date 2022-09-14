@@ -4,11 +4,11 @@
 <main>
 
     <!-- Modals -->
-    
+
     {% include "modals.html" %}
 
     <!-- Intro -->
-    <div class="row profile">
+    <div class="row profile mb-5">
         <div class="d-flex justify-content-center">
             <div class="col-6 text-center">
                 <img src="/../static/images/profile_photo.png" class="profile-img" alt="image of me">
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mb-5">
         {% if current_user.is_authenticated %}
         <h1 class="display-3">Welcome {{ current_user.first_name }}</h1>
         {% else %}
@@ -28,50 +28,57 @@
 
     <div class="row bio-portion">
 
-        <div class="bio-body">
-            <p>My name is Jordy Caceres. I live in New York City, the city that never truly sleeps, and
-                worked
-                as a Registered Nurse for different hospitals.<br><br>
-                I
-                went to City College and have a BS in Biology, and also have a BS in Nursing at NYU. You would
+        <div class="bio-body mb-5">
+            <p>My name is Jordy Caceres. I live in New York City, the city that never truly sleeps and have worked as a
+                Registered Nurse for different hospitals.<br><br>
+                I'm a City College graduate with a BS degree in Biology, and an NYU alumni with a BSN degree in Nursing.
+                You would
                 think I have caught on by now, I'm now fully immersed into web development. I'm excited
                 to have begun this career journey as it definitely has been mentally stimulating, with extremely
                 rewarding battles that I hope to contribute towards the goals and success of a company.<br><br>
             <p>I have completed a Software Developer Bootcamp at Coding Temple, and through that,
-                have developed applications ranging from languages Python, Javascript, and Typescript.
+                have developed many applications skills that I continue to build upon.
                 More
-                information on my applications can be found in the projects section.</p>
+                information on my applications can be found in the projects section <a href="#projects">below</a>.</p>
         </div>
-        <span>My Capstone project gained traction on Course Report. You can see me talk about it on their blog
-            <a
-                href="https://www.coursereport.com/blog/inkvue-what-bootcamp-grad-jordy-built-at-coding-temple">here</a></span>
+        <p class="lead">My Capstone project <strong>inkVue</strong> gained traction on Course Report. You can see me
+            talk about it on their blog
+            <a href="https://www.coursereport.com/blog/inkvue-what-bootcamp-grad-jordy-built-at-coding-temple">here</a>.
+        </p>
+
     </div>
 
-    <div class="career">
-        <h2>Career Change</h2>
-
-        <p>I began my first real career as a Registered Nurse. I worked in various units, working with a
-            diverse
-            patient population requiring medical attention, from stable elective surgeries to acute trauma
-            events, and have met incredible people from all different backgrounds. I learned many things in
-            my
-            career, including collaboration, interdisciplinary teamwork, and revision to plans when outcomes
-            are
-            not effective, much of which I believe can translate to this new career.</p>
+    <div class="mb-4 career">
+        <h2 class="display-5">Career Change</h2>
+        <div class="career-change offset-3 my-3">
+            <p>I began my first real career as a Registered Nurse. I worked in various units, working with a
+                diverse
+                patient population requiring medical attention, from stable elective surgeries to acute trauma
+                events, and have met incredible people from all different backgrounds.<br><br>I learned many things in
+                my
+                career, including collaboration, interdisciplinary teamwork, and revision to plans when outcomes
+                are
+                not effective, much of which I believe can translate to this new career.</p>
+        </div>
     </div>
 
-    <div class="webdev">
-        <h2>Why Web Development?</h2>
-        <p>
-            I chose web development for a few reasons. I wasn't sure initally what it entailed. My best friend
-            is a software engineer, and I was able to see him grow in his career. We'd compare our lifestyles or
-            our days at work, his sounded
-            mentally stimulating whereas mine was physically taxing. Knowing I wouldn't be able to continue with
-            a poor injury record from weightlifitng, I am grateful for the qualities I have inherited through
-            it. Nursing has made me confident in communication and interdisciplinary collaboration, voicing
-            suggestions especially through patient advocation, and thinking critically. I felt these could carry
-            over beautfilly into a career of software engineering, one that emphasis team cooperation, mental
-            stimulation, and thinking on constant improvement. </p>
+    <div class="mb-5 webdev">
+        <h2 class="display-5">Why Web Development?</h2>
+        <div class="why-webdev offset-3 my-3">
+            <p>
+                I chose web development for a few reasons. I wasn't sure initally what it entailed. My best friend
+                is a software engineer, and I was able to see him grow in his career. We'd compare our lifestyles or
+                our days at work. His days sounded
+                mentally stimulating whereas mine was physically taxing... Knowing, honsetly, I couldn't see myself
+                performing
+                the physical labor required, while placing my and my family's health at risk, I still am grateful for
+                the
+                qualities I have inherited through
+                it. <br><br> Nursing has made me confident in communication and interdisciplinary collaboration, voicing
+                suggestions especially through patient advocation, and thinking critically. I felt these could carry
+                over beautfilly into a career of software engineering, one that emphasises team cooperation, mental
+                stimulation, and thinking on constant improvement. </p>
+        </div>
     </div>
 
     <!-- Projects -->
@@ -120,6 +127,28 @@
         </div>
     </div>
     {% endfor %}
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            {% if prev_url %}
+          <li class="page-item">
+            <a class="page-link" href="{{ prev_url }}">Previous</a>
+          </li>
+            {% else %}
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+            {% endif %}
+          {% if next_url %}
+          <li class="page-item">
+            <a class="page-link" href="{{ next_url }}">Next</a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <a class="page-link">Next</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
 </section>
 <article class="w-50 offset-3 my-5">
     <!-- Contact -->

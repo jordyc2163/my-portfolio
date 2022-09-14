@@ -1,5 +1,3 @@
-from crypt import methods
-from email import message
 from urllib import request
 from app import app, db
 from flask import render_template, flash, redirect, url_for, request
@@ -8,6 +6,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, Post, Message
 from werkzeug.urls import url_parse
 from datetime import datetime
+from sqlalchemy import desc
 
 
 # This application will do all functionality on the same page
@@ -55,6 +54,12 @@ def index(id=''):
             edit_post_form.edit_comment.data = post.body
             edit_post_form.edit_checkbox.data = post.anonymous
             modal3 = True
+        
+        page = request.args.get('page', 1, type=int)
+        posts = Post.query.order_by(desc(Post.timestamp)).paginate(page, app.config['POSTS_PER_PAGE'], 'False')
+        print(posts.items)
+        next_url = url_for('index', page=posts.next_num) if posts.has_next else None
+        prev_url = url_for('index', page=posts.prev_num) if posts.has_prev else None
 
 
     # Conditional form submissions for each route
@@ -122,7 +127,7 @@ def index(id=''):
 
             return redirect(url_for('index'))
    
-    return render_template("index.html", form=form, contact_form=contact_form, post_form=post_form, register_form=register_form, edit_post_form=edit_post_form, delete_post=delete_post, all_posts=all_posts, modal=modal, modal2=modal2, modal3=modal3, post_id=id)
+    return render_template("index.html", form=form, contact_form=contact_form, post_form=post_form, register_form=register_form, edit_post_form=edit_post_form, delete_post=delete_post, all_posts=posts.items, modal=modal, modal2=modal2, modal3=modal3, post_id=id, next_url=next_url, prev_url=prev_url)
 
 
 @app.route('/logout')

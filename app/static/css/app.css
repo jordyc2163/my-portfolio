@@ -25,7 +25,7 @@ body {
 .bio-portion {
     justify-content: space-around;
 }
-.bio-body {
+.bio-body, .career-change, .why-webdev {
     width: 50%;
 }
 
@@ -58,4 +58,5 @@ a {
     height: 20vh;
     clear: both;
 }
+
 
