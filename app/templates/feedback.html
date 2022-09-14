@@ -1,0 +1,19 @@
+{% block feedback %}
+<div class="my-5">
+    <h3 class="display-3 text-center" id="feedback">All Feedback </h3>
+    {% if current_user.is_anonymous %}
+    <h5 class="text-center">Log in <a href="{{ url_for('login') }}">here</a> to leave a comment!</h5>
+    {% endif %}
+    <form action="{{ url_for('post') }}" method="post" class="needs-validation" novalidate>
+        {{ post_form.hidden_tag() }}
+        <div class="input-group mb-3 w-75 offset-1">
+            {{ post_form.comment(class="form-control", placeholder="Add a Comment") }}
+            {{ post_form.post(class="btn btn-outline-secondary") }}
+        </div>
+        <div class="form-check offset-1">
+            {{ post_form.checkbox(class="form-check-input", value="yesToAnonymous", id="checkbox") }}
+            {{ post_form.checkbox.label(class="form-check-label", for="checkbox") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% block contact %}
+<div class="row" id="contact">
+    <div class="col">
+        <h3>Contact Me</h3>
+    </div>
+    <dl class="row">
+        <dt class="col-sm-1"><i class="fa-solid fa-envelope"></i></dt>
+        <dd class="col-sm-11">jordycaceres00@gmail.com</dd>
+
+        <dt class="col-sm-1"><i class="fa-solid fa-phone"></i></dt>
+        <dd class="col-sm-11">
+            <p>+13477388690</p>
+        </dd>
+    </dl>
+</div>
+<form action="{{ url_for('send') }}" class="needs-validation" method="post" novalidate>
+    {{ contact_form.hidden_tag() }}
+    <div class="mb-3">
+        <div class="form-floating mb-3">
+            {{ contact_form.subject(class="form-control", id="floatingInput", placeholder="anything") }}
+            <label for="floatingInput">Subject</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        {{ contact_form.body(class="form-control", rows="3", placeholder="Enter message here...") }}
+    </div>
+    {{ contact_form.send(class="btn btn-outline-secondary") }}
+</form>
+{% endblock %}

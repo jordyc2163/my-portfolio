@@ -1,5 +1,6 @@
 body {
-    height: 5000px;
+    height: 300vh;
+    min-height: 100%;
 }
 .profile {
     background-image: url(../images/desk.jpg);
@@ -41,3 +42,20 @@ body {
 a {
     text-decoration: none;
 }
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 20vh;
+}
+
+#footer {
+    position: relative;
+    margin-top: -20vh;
+    height: 20vh;
+    clear: both;
+}
+

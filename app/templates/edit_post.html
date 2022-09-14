@@ -10,8 +10,8 @@
             {% endfor %}
     </div>
     <div class="form-check mb-3">
-        {{ edit_post_form.edit_checkbox(class="form-check-input", value="yesToAnonymous", id="checkbox") }}
-        {{ edit_post_form.edit_checkbox.label(class="form-check-label", for="checkbox") }}
+        {{ edit_post_form.edit_checkbox(class="form-check-input", value="yesToAnonymous", id="edit-checkbox") }}
+        {{ edit_post_form.edit_checkbox.label(class="form-check-label", for="edit-checkbox") }}
         {% for error in edit_post_form.edit_checkbox.errors%}
             <div class="alert alert-danger d-flex fs-6 h-25 p-2 mt-2 justify-content-between" role="alert">
                 {{ error }}

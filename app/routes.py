@@ -1,4 +1,5 @@
 from crypt import methods
+from email import message
 from urllib import request
 from app import app, db
 from flask import render_template, flash, redirect, url_for, request
@@ -114,6 +115,11 @@ def index(id=''):
 
         if contact_form.send.data and contact_form.validate_on_submit():
             print(contact_form.send.data, contact_form.subject.data, contact_form.body.data)
+            message = Message(subject=contact_form.subject.data, body=contact_form.body.data, sender=current_user)
+            print(message)
+            db.session.add(message)
+            db.session.commit()
+
             return redirect(url_for('index'))
    
     return render_template("index.html", form=form, contact_form=contact_form, post_form=post_form, register_form=register_form, edit_post_form=edit_post_form, delete_post=delete_post, all_posts=all_posts, modal=modal, modal2=modal2, modal3=modal3, post_id=id)
@@ -124,6 +130,13 @@ def index(id=''):
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
+@app.route('/messages')
+@login_required
+def messages():
+    messages = Message.query.all()
+    return render_template('messages.html', messages=messages)
 
 @app.route('/post/<id>', methods=['POST'])
 @login_required
