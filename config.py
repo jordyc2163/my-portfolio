@@ -7,3 +7,4 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     LANGUAGES = ['en', 'es', 'de', 'fr']
     POSTS_PER_PAGE = 3
+    
