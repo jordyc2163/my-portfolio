@@ -59,4 +59,22 @@ a {
     clear: both;
 }
 
+.yelp-p {
+    color: #14213d;
+}
+
+.yelp-h {
+    font-size: xx-large;
+}
+
+.ink-cap {
+    background-color: #314253;
+    border-radius: 10px;
+}
+
+.yelp-cap {
+    background-color: white;
+    border-radius: 10px;
+}
+
 
